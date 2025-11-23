@@ -21,7 +21,7 @@ if (themeToggle) {
 /* =====================================================================
    GEMINI API SETUP — PUT YOUR API KEY HERE
 ===================================================================== */
-const GEMINI_API_KEY = "AIzaSyCP4RNj6QvaeMaDFpKzWAqNCcQg44Ptrw8";
+const GEMINI_API_KEY = "AIzaSyBCXu4HRqlGCuHLW3OqeO-2y0CE4RUcdUA";
 const GEMINI_MODEL = "gemini-2.5-flash";
 
 /* =====================================================================
@@ -380,4 +380,3 @@ if (chatSend) {
         addMessage(reply, "bot");
     });
 }
-
