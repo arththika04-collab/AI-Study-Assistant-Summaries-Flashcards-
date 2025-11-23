@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login – AI Study Guider</title>
+    <title>AI Study Guider – Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Montserrat for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="light">
 
-    <div class="login-container">
-
-        <div class="login-card glass">
-
-            <!-- LOGO SECTION -->
-            <img src="assets/images/logo.png" class="login-logo" alt="Logo">
-
-            <h2 class="login-title">AI STUDY GUIDER</h2>
-            <p class="login-subtitle">Welcome back! Please log in</p>
-
-            <form class="login-form">
-                <div class="input-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="Enter your email" required>
-                </div>
-
-                <div class="input-group">
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter your password" required>
-                </div>
-
-                <button type="submit" class="login-btn">Login</button>
-            </form>
-
-            <div class="login-links">
-                <a href="index.html">Home</a>
-                <span>•</span>
-                <a href="about.html">About</a>
-            </div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="assets/images/logo.png" class="sidebar-logo" alt="Logo">
+            <div class="brand-title welcome-title">AI STUDY GUIDER</div>
+            <div class="brand-subtitle">Learn smarter with AI</div>
         </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="login.html">Login</a>
+            <a href="about.html">About</a>
+        </nav>
 
-    </div>
+        <div class="mode-toggle">
+            <span>🌞</span>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+            </label>
+            <span>🌙</span>
+        </div>
+    </aside>
 
+    <!-- Main -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>AI Study Assistant</h1>
+            <p>Generate instant summaries, flashcards, and chat with your AI tutor.</p>
+        </section>
+
+        <!-- Input Section -->
+        <section class="ai-section">
+            <textarea id="lessonInput" placeholder="Paste your lesson or topic..."></textarea>
+
+            <div class="action-row">
+                <button onclick="generateSummary()">Generate Summary</button>
+                <button onclick="generateFlashcards()">Generate Flashcards</button>
+            </div>
+
+            <p id="loading" class="loading hidden">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                Thinking...
+            </p>
+
+            <p id="errorMessage" class="error-message hidden"></p>
+        </section>
+
+        <!-- Summary -->
+        <section class="summary-output hidden" id="summarySection">
+            <h2>Summary</h2>
+            <p id="summaryText" class="summary-content"></p>
+            <button class="save-btn" onclick="saveSummary()">Save Summary</button>
+        </section>
+
+        <!-- Saved Summaries -->
+        <section id="savedSummaries" class="saved-section hidden">
+            <h2>Saved Summaries</h2>
+            <ul id="savedList"></ul>
+        </section>
+
+        <!-- Flashcards -->
+        <section class="flashcard-container hidden" id="flashcardSection">
+            <h2>Flashcards</h2>
+
+            <div class="flip-card" id="flipCard">
+                <div class="flip-inner">
+                    <div class="flip-front" id="flashcardFront"></div>
+                    <div class="flip-back" id="flashcardBack"></div>
+                </div>
+            </div>
+
+            <div class="flashcard-buttons">
+                <button onclick="prevFlashcard()">◀ Prev</button>
+                <button onclick="flipFlashcard()">Flip 🔄</button>
+                <button onclick="nextFlashcard()">Next ▶</button>
+            </div>
+        </section>
+
+        <!-- Chat Mode -->
+        <section class="chat-section">
+            <h2>AI Chat Tutor</h2>
+
+            <div class="chat-box" id="chatBox"></div>
+
+            <div class="chat-input-row">
+                <input type="text" id="chatInput" placeholder="Ask anything...">
+                <button onclick="sendChat()">Send</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
