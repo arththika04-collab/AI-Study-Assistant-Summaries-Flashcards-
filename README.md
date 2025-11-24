@@ -60,12 +60,12 @@ These fonts were chosen for clear headings and highly readable body text on smal
 
 ## Screenshots 
 
-![Screenshot 1](assets/images/screenshot/welcome.png)
-![Screenshot 2](assets/images/screenshot/LoginPage.png)
-![Screenshot 3](assets/images/screenshot/HomePage.png)
-![Screenshot 4](assets/images/screenshot/AboutPage1.png)
-![Screenshot 5](assets/images/screenshot/aboutpage2.png)
-![Screenshot 6](assets/images/screenshot/aboutPageDarkmode.png)
+![Screenshot 1](assets/images/screenshots/welcome.png)
+![Screenshot 2](assets/images/screenshots/LoginPage.png)
+![Screenshot 3](assets/images/screenshots/HomePage.png)
+![Screenshot 4](assets/images/screenshots/AboutPage1.png)
+![Screenshot 5](assets/images/screenshots/aboutpage2.png)
+![Screenshot 6](assets/images/screenshots/aboutPageDarkmode.png)
 
 
 
