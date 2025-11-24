@@ -60,7 +60,7 @@ These fonts were chosen for clear headings and highly readable body text on smal
 
 ## Screenshots 
 
-![Screenshot 1](assets/images/screenshots/welcome.png)
+![Screenshot 1](assets/images/screenshots/welcomepage.png)
 ![Screenshot 2](assets/images/screenshots/LoginPage.png)
 ![Screenshot 3](assets/images/screenshots/HomePage.png)
 ![Screenshot 4](assets/images/screenshots/AboutPage1.png)
