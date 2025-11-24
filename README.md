@@ -35,7 +35,7 @@ These fonts were chosen for clear headings and highly readable body text on smal
 
 ## Features
 
-- Generate concise summaries from pasted lessons
+- Generate summaries from pasted lessons
 - Generate simple study flashcards with flip animation
 - Interactive AI chat tutor (client-side prompt wrapper)
 - Light / Dark theme with persistent choice
@@ -59,6 +59,13 @@ These fonts were chosen for clear headings and highly readable body text on smal
 
 
 ## Screenshots 
+
+![Screenshot 1](assets/images/screenshot/welcome.png)
+![Screenshot 2](assets/images/screenshot/LoginPage.png)
+![Screenshot 3](assets/images/screenshot/HomePage.png)
+![Screenshot 4](assets/images/screenshot/AboutPage1.png)
+![Screenshot 5](assets/images/screenshot/aboutpage2.png)
+![Screenshot 6](assets/images/screenshot/aboutPageDarkmode.png)
 
 
 
