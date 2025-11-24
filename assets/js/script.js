@@ -21,7 +21,7 @@ if (themeToggle) {
 /* =====================================================================
    GEMINI API SETUP — PUT YOUR API KEY HERE
 ===================================================================== */
-const GEMINI_API_KEY = "AIzaSyBCXu4HRqlGCuHLW3OqeO-2y0CE4RUcdUA";
+const GEMINI_API_KEY = "AIzaSyCzdrUJQDvQNdixPH0a5OBRvbpyXHF6hlc";
 const GEMINI_MODEL = "gemini-2.5-flash";
 
 /* =====================================================================
