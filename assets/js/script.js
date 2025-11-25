@@ -88,6 +88,7 @@ function showError(msg) {
 /* =====================================================================
    AI TYPING EFFECT
 ===================================================================== */
+// slow typing effect         text  element  ,
 function typeWriterEffect(element, text) {
     element.innerHTML = "";
     let i = 0;
@@ -105,6 +106,11 @@ function typeWriterEffect(element, text) {
 /* =====================================================================
    SUMMARY GENERATION + AUTO-SAVE
 ===================================================================== */
+// It takes your lesson and asks the AI to make it short and easy.
+
+
+
+// start to summary work 
 async function generateSummary() {
     const input = document.getElementById("lessonInput").value.trim();
     const summaryText = document.getElementById("summaryText");
@@ -116,7 +122,7 @@ async function generateSummary() {
     }
 
     showLoading();
-
+// give metha point into bullet
     const prompt = `
 You are an expert study tutor. Convert the following lesson into a
 CLEAR, SIMPLE, EASY summary with bullet points. Avoid unnecessary words.
@@ -135,6 +141,7 @@ ${input}
     } catch (error) {
         showError("AI error. Please check your internet or API key.");
     }
+    // hide loadng
     hideLoading();
 }
 
@@ -281,6 +288,8 @@ ${input}
 /* ==========================================================
    CHATGPT-STYLE CHAT MODE
 ========================================================== */
+//  our text show the bubble meg
+
 async function sendChat() {
     const input = document.getElementById("chatInput");
     const msg = input.value.trim();
@@ -295,18 +304,19 @@ async function sendChat() {
         const content = document.createElement("div");
         content.className = "msg-content";
         content.textContent = text;
-
+//    text time 
         const time = document.createElement("div");
         time.className = "msg-time";
         time.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+// It creates a small message box (a chat bubble).
+        wrapper.appendChild(content); 
 
-        wrapper.appendChild(content);
         wrapper.appendChild(time);
         box.appendChild(wrapper);
         box.scrollTop = box.scrollHeight;
     }
 
-    // append user message
+    //  take the  answer from ai server site
     appendMessage(msg, 'user');
     input.value = "";
     showLoading();
@@ -329,7 +339,7 @@ User: ${msg}
 /* ----------------------------------------------------
    AI CHAT TUTOR – Interactive Chat
 ----------------------------------------------------- */
-
+// show the answer  for chat tutor like chatgpt
 const chatBoxEl = document.getElementById("chatBox");
 const chatInput = document.getElementById("chatInput");
 const chatSend = document.getElementById("chatSend");
@@ -353,7 +363,7 @@ function addMessage(text, sender) {
     chatBoxEl.scrollTop = chatBoxEl.scrollHeight;
 }
 
-// Typing animation
+// Typing animation slow
 async function typeAnimation(element, text) {
     element.innerHTML = "";
     let i = 0;
