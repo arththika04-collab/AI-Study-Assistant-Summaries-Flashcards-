@@ -3,12 +3,15 @@
 ===================================================================== */
 const themeToggle = document.getElementById("themeToggle");
 
-if (themeToggle) {
+
+// last mode storage
+if (themeToggle) {                                                        
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
         themeToggle.checked = true;
     }
 
+    // it only work when i click buttons
     themeToggle.addEventListener("change", () => {
         document.body.classList.toggle("dark");
         localStorage.setItem(
@@ -27,11 +30,14 @@ const GEMINI_MODEL = "gemini-2.5-flash";
 /* =====================================================================
    UNIVERSAL GEMINI API CALL FUNCTION
 ===================================================================== */
+
+// we make a request for gemini server
 async function callGemini(prompt) {
     const url =
         `https://generativelanguage.googleapis.com/v1beta/models/` +
         `${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
+// change our question(request)into prompt
     const payload = {
         contents: [
             {
@@ -40,14 +46,17 @@ async function callGemini(prompt) {
         ]
     };
 
+    // this code works intermediate to make a connection between customer and serversystem
     const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
     });
 
+    // we get a response
     const data = await response.json();
 
+    // if api connection error, then show a error message
     try {
         return data.candidates[0].content.parts[0].text;
     } catch (e) {
