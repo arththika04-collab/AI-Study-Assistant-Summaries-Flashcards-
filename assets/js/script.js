@@ -24,7 +24,7 @@ if (themeToggle) {
 /* =====================================================================
    GEMINI API SETUP — PUT YOUR API KEY HERE
 ===================================================================== */
-const GEMINI_API_KEY = "AIzaSyCzdrUJQDvQNdixPH0a5OBRvbpyXHF6hlc";
+const GEMINI_API_KEY = "AIzaSyCLmQ331dit9CUNOGj3BQhAOHWIsjrY__A";
 const GEMINI_MODEL = "gemini-2.5-flash";
 
 /* =====================================================================
@@ -67,13 +67,17 @@ async function callGemini(prompt) {
 /* =====================================================================
    LOADING + ERROR HANDLERS
 ===================================================================== */
+
+// show thinking... (like youtube loading) 
 function showLoading() {
     document.getElementById("loading").classList.remove("hidden");
 }
+
+//  after getting summary thinking... text   hidden
 function hideLoading() {
     document.getElementById("loading").classList.add("hidden");
 }
-
+// show network error message
 function showError(msg) {
     const errorBox = document.getElementById("errorMessage");
     errorBox.innerText = msg;
